@@ -1,0 +1,129 @@
+.brands-hero {
+  position: relative;
+  padding-top: 128px;
+  padding-bottom: 70px;
+  overflow: hidden;
+}
+
+.brands-hero__bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.16), transparent 55%),
+    radial-gradient(circle at 90% 30%, rgba(255, 255, 255, 0.06), transparent 55%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.75), transparent 70%);
+  opacity: 0.95;
+}
+
+.brands-search {
+  padding: 18px;
+  border-radius: 18px;
+  max-width: 920px;
+  margin: 0 auto;
+}
+
+.brands-search__row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.brands-search__input {
+  position: relative;
+  flex: 1 1 520px;
+  min-width: 260px;
+}
+
+.brands-search__icon {
+  position: absolute;
+  left: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+}
+
+.brands-search__count {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.brands-search__input .form-control {
+  padding-left: 40px !important;
+  padding-right: 64px !important;
+}
+
+.brand-card {
+  overflow: hidden;
+  border: 1px solid var(--border-color) !important;
+  background: var(--panel-surface) !important;
+  transition: all 250ms ease;
+  animation: lux-fade-up 820ms cubic-bezier(0.23, 1, 0.32, 1) both;
+}
+
+.brand-card:hover {
+  transform: translateY(-8px);
+  border-color: rgba(214, 178, 74, 0.25) !important;
+}
+
+.brand-card__imageWrap {
+  height: 260px;
+  overflow: hidden;
+}
+
+.brand-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 700ms ease;
+}
+
+.brand-card:hover .brand-card__img {
+  transform: scale(1.08);
+}
+
+.brand-card__name {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 1.6rem;
+  color: var(--luxury-gold);
+  margin-bottom: 10px;
+}
+
+.brand-card__desc {
+  color: var(--text-muted);
+  line-height: 1.7;
+  margin-bottom: 18px;
+}
+
+.brand-card__link {
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-weight: 800;
+  font-size: 0.72rem;
+}
+
+.brand-card__link:hover {
+  color: var(--luxury-gold);
+}
+
+[data-theme='light'] .brands-hero__bg {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212, 175, 55, 0.16), transparent 55%),
+    radial-gradient(circle at 90% 30%, rgba(255, 250, 242, 0.35), transparent 55%),
+    linear-gradient(180deg, rgba(255, 248, 238, 0.8), transparent 70%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand-card {
+    animation: none !important;
+  }
+}

@@ -1,0 +1,15 @@
+/* Main App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--page-bg);
+  transition: background 220ms ease, color 220ms ease;
+}
+
+main.main-content {
+  flex: 1;
+  background: var(--page-bg);
+  color: var(--text-primary);
+}

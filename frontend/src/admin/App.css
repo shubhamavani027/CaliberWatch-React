@@ -1,0 +1,603 @@
+/* Main App Container */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background: var(--luxury-bg);
+}
+
+main.main-content {
+  flex: 1;
+  background: transparent;
+  padding-top: 20px;
+}
+
+/* Page Styling */
+.home-page,
+.category-page,
+.products-page,
+.admin-page,
+.watches-page {
+  background: transparent;
+  min-height: 90vh;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 80px 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 1000"><circle cx="200" cy="200" r="300" fill="%23E0A084" opacity="0.05"/><circle cx="800" cy="800" r="400" fill="%23E0A084" opacity="0.05"/></svg>');
+  opacity: 0.5;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #E0A084;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  animation: slideInLeft 0.8s ease;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  color: #F4A582;
+  margin-bottom: 1.5rem;
+  animation: slideInLeft 0.8s ease 0.2s both;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  color: #ddd;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  animation: slideInLeft 0.8s ease 0.4s both;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  animation: slideInLeft 0.8s ease 0.6s both;
+}
+
+.btn-primary-custom {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-primary-custom:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(224, 160, 132, 0.3);
+}
+
+.btn-secondary-custom {
+  background: transparent;
+  border: 2px solid #E0A084;
+  color: #E0A084;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.btn-secondary-custom:hover {
+  background: #E0A084;
+  color: #1a1a1a;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(224, 160, 132, 0.3);
+}
+
+/* Features Section */
+.features-section {
+  background: #f8f9fa;
+  padding: 80px 0;
+}
+
+.feature-card {
+  padding: 2rem;
+  margin-bottom: 2rem;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  color: #E0A084;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+.feature-card h3 {
+  color: #1a1a1a;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Category Section */
+.category-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 3rem;
+  position: relative;
+  text-align: center;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 4px;
+  background: linear-gradient(90deg, #E0A084 0%, #F4A582 100%);
+  margin: 1rem auto 0;
+}
+
+/* Category Cards */
+.category-card-enhanced {
+  position: relative;
+  width: 100%;
+  height: 200px;
+  border-radius: 15px;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 0 5px 20px rgba(224, 160, 132, 0.1);
+  background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+  border: 2px solid #eee;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-card-enhanced::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(224, 160, 132, 0) 0%, rgba(224, 160, 132, 0.15) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  z-index: 1;
+}
+
+.category-card-enhanced:hover {
+  border-color: #E0A084;
+  box-shadow: 0 15px 40px rgba(224, 160, 132, 0.25);
+  transform: translateY(-8px) scale(1.02);
+}
+
+.category-card-enhanced:hover::before {
+  opacity: 1;
+}
+
+.category-card-enhanced.active {
+  border-color: #E0A084;
+  background: linear-gradient(135deg, rgba(224, 160, 132, 0.15) 0%, rgba(244, 165, 130, 0.08) 100%);
+  box-shadow: 0 10px 30px rgba(224, 160, 132, 0.3);
+  transform: scale(1.05);
+}
+
+.category-card-inner {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  gap: 0.8rem;
+}
+
+.category-icon-large {
+  font-size: 3.5rem;
+  line-height: 1;
+  transition: all 0.4s ease;
+  display: block;
+}
+
+.category-card-enhanced:hover .category-icon-large {
+  transform: scale(1.2) rotate(10deg);
+  filter: drop-shadow(0 4px 8px rgba(224, 160, 132, 0.3));
+}
+
+.category-name {
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 0;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+}
+
+.category-card-enhanced:hover .category-name {
+  color: #E0A084;
+}
+
+.category-count {
+  margin: 0;
+  color: #999;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  letter-spacing: 0.5px;
+}
+
+.category-card-enhanced:hover .category-count {
+  color: #E0A084;
+}
+
+/* Products Section */
+.products-section {
+  padding: 80px 0;
+  background: white;
+}
+
+.product-card {
+  border: none;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+}
+
+.product-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(224, 160, 132, 0.2);
+}
+
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  background: #f8f9fa;
+  height: 250px;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover .card-image {
+  transform: scale(1.1);
+}
+
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .card-overlay {
+  opacity: 1;
+}
+
+.view-btn {
+  background: #E0A084;
+  color: #1a1a1a;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+}
+
+.view-btn:hover {
+  background: #F4A582;
+  transform: scale(1.05);
+}
+
+.watch-title {
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.watch-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.watch-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #E0A084;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.stars {
+  color: #FFC107;
+}
+
+.review-count {
+  color: #999;
+}
+
+.btn-add-to-cart {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  width: 100%;
+  cursor: pointer;
+  margin-top: auto;
+}
+
+.btn-add-to-cart:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(224, 160, 132, 0.3);
+}
+
+.spinner-custom {
+  color: #E0A084;
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Newsletter Section */
+.newsletter-section {
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: white;
+  padding: 60px 0;
+}
+
+.newsletter-section h2 {
+  color: #E0A084;
+  font-size: 2rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter-section p {
+  color: #ddd;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+.newsletter-input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(224, 160, 132, 0.2);
+}
+
+.btn-subscribe {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-subscribe:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: scale(1.05);
+}
+
+/* Animations */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+/* Dark Mode */
+body.dark-mode .home-page,
+body.dark-mode .category-page,
+body.dark-mode .products-page,
+body.dark-mode .admin-page,
+body.dark-mode .watches-page {
+  background: #0f1416;
+  color: #e9eef1;
+}
+
+body.dark-mode .hero-section {
+  background: linear-gradient(135deg, #0f1416 0%, #181b1d 100%);
+}
+
+body.dark-mode .hero-title {
+  color: #F4A582;
+}
+
+body.dark-mode .hero-subtitle {
+  color: #E0A084;
+}
+
+body.dark-mode .hero-description {
+  color: #c9d0d3;
+}
+
+body.dark-mode .features-section,
+body.dark-mode .products-section,
+body.dark-mode .category-section {
+  background: #0b0d0e;
+}
+
+body.dark-mode .feature-card h3,
+body.dark-mode .section-title,
+body.dark-mode .watch-title {
+  color: #fff;
+}
+
+body.dark-mode .product-card {
+  background: #121516;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.6);
+}
+
+body.dark-mode .card-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .view-btn {
+  background: #E0A084;
+  color: #111;
+}
+
+body.dark-mode .watch-description {
+  color: #c9d0d3;
+}
+
+body.dark-mode .watch-price {
+  color: #F4A582;
+}
+
+body.dark-mode .newsletter-section {
+  background: #0b0d0e;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hero-section {
+    padding: 60px 0;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .feature-card {
+    padding: 1.5rem;
+  }
+
+  .category-card-enhanced {
+    height: 180px;
+  }
+
+  .category-icon-large {
+    font-size: 2.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .category-card-enhanced {
+    height: 150px;
+  }
+
+  .newsletter-section {
+    padding: 40px 0;
+  }
+}

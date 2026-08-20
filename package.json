@@ -1,0 +1,23 @@
+{
+  "name": "the-caliber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"cd backend && npx nodemon --ignore uploads/ server.js\" \"cd frontend && cross-env PORT=3000 BROWSER=none npx react-scripts start\"",
+    "run": "concurrently \"cd backend && npx nodemon --ignore uploads/ server.js\" \"cd frontend && cross-env PORT=3000 BROWSER=none npx react-scripts start\"",
+    "start": "npm --prefix frontend start",
+    "start:frontend": "npm --prefix frontend start",
+    "build:frontend": "npm --prefix frontend run build",
+    "start:backend": "npm --prefix backend run dev:watch",
+    "test": "echo \"No root tests\" && exit 0"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "concurrently": "^9.2.1",
+    "cross-env": "^10.1.0"
+  }
+}

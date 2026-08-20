@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f5f5f5"/>
+  <rect x="80" y="60" width="240" height="280" rx="50" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  <rect x="95" y="75" width="210" height="250" rx="45" fill="#2d2d2d"/>
+  <rect x="110" y="90" width="180" height="220" rx="40" fill="#000"/>
+  <rect x="120" y="100" width="160" height="200" rx="35" fill="#1a1a1a"/>
+  <text x="200" y="160" font-family="monospace" font-size="48" font-weight="bold" fill="#E0A084" text-anchor="middle">10:45</text>
+  <text x="200" y="200" font-family="Arial" font-size="14" fill="#fff" text-anchor="middle">❤️ 72 BPM</text>
+  <text x="200" y="225" font-family="Arial" font-size="12" fill="#999" text-anchor="middle">8,234 steps</text>
+  <text x="200" y="350" font-family="Arial" font-size="16" font-weight="bold" fill="#E0A084" text-anchor="middle">SAMSUNG</text>
+</svg>

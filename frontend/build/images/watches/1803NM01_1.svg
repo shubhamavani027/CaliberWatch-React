@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f5f5f5"/>
+  <circle cx="200" cy="200" r="180" fill="#1a1a1a" stroke="#000" stroke-width="3"/>
+  <circle cx="200" cy="200" r="170" fill="#000"/>
+  <circle cx="200" cy="200" r="160" fill="#1a1a1a" opacity="0.8"/>
+  <circle cx="200" cy="200" r="150" fill="#000"/>
+  <g fill="#E0A084">
+    <rect x="195" y="60" width="10" height="30" rx="2"/>
+    <rect x="290" y="190" width="30" height="10" rx="2"/>
+    <rect x="195" y="310" width="10" height="30" rx="2"/>
+    <rect x="60" y="190" width="30" height="10" rx="2"/>
+  </g>
+  <g stroke="#666" stroke-width="2">
+    <circle cx="265" cy="105" r="2" fill="#666"/>
+    <circle cx="295" cy="135" r="2" fill="#666"/>
+    <circle cx="265" cy="295" r="2" fill="#666"/>
+    <circle cx="135" cy="295" r="2" fill="#666"/>
+    <circle cx="105" cy="265" r="2" fill="#666"/>
+    <circle cx="105" cy="135" r="2" fill="#666"/>
+    <circle cx="135" cy="105" r="2" fill="#666"/>
+    <circle cx="295" cy="265" r="2" fill="#666"/>
+  </g>
+  <circle cx="200" cy="200" r="6" fill="#E0A084"/>
+  <line x1="200" y1="200" x2="200" y2="110" stroke="#E0A084" stroke-width="8" stroke-linecap="round"/>
+  <line x1="200" y1="200" x2="280" y2="120" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  <text x="200" y="330" font-family="Arial" font-size="14" font-weight="bold" fill="#E0A084" text-anchor="middle">GARMIN</text>
+</svg>

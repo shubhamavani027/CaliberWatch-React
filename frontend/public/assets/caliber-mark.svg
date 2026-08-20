@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72" fill="none">
+  <title>Caliber Watch</title>
+  <desc>Luxury watch emblem for Caliber</desc>
+  <defs>
+    <radialGradient id="caliberGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(36 24) rotate(90) scale(36)">
+      <stop offset="0" stop-color="#F4D879" stop-opacity="0.34" />
+      <stop offset="0.62" stop-color="#D6B24A" stop-opacity="0.1" />
+      <stop offset="1" stop-color="#D6B24A" stop-opacity="0" />
+    </radialGradient>
+    <linearGradient id="caliberGold" x1="19" y1="14" x2="54" y2="56" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#F6DA80" />
+      <stop offset="0.48" stop-color="#D6B24A" />
+      <stop offset="1" stop-color="#B98922" />
+    </linearGradient>
+    <linearGradient id="caliberShadow" x1="30" y1="30" x2="48" y2="49" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#D6B24A" stop-opacity="0.34" />
+      <stop offset="1" stop-color="#D6B24A" stop-opacity="0" />
+    </linearGradient>
+  </defs>
+
+  <circle cx="36" cy="36" r="34" fill="url(#caliberGlow)" />
+
+  <path d="M31 8h10v6c0 1.1-.9 2-2 2h-6c-1.1 0-2-.9-2-2V8Z" fill="#181512" fill-opacity=".74" />
+  <path d="M31 56h10v6c0 1.1-.9 2-2 2h-6c-1.1 0-2-.9-2-2v-6Z" fill="#181512" fill-opacity=".74" />
+
+  <circle cx="36" cy="36" r="24" fill="#13110F" fill-opacity=".84" stroke="url(#caliberGold)" stroke-width="3.5" />
+  <circle cx="36" cy="36" r="20" stroke="#F0D27A" stroke-opacity=".18" />
+
+  <path d="M36 36 47.5 24.5" stroke="url(#caliberGold)" stroke-width="5" stroke-linecap="round" />
+  <path d="M36 36 28.5 28.5" stroke="url(#caliberGold)" stroke-width="4" stroke-linecap="round" />
+  <circle cx="36" cy="36" r="2.75" fill="#F6DA80" />
+
+  <path d="M36 36 50 50" stroke="url(#caliberShadow)" stroke-width="5" stroke-linecap="round" />
+  <path d="M21.5 20.5A24 24 0 0 1 36 12" stroke="#F6DA80" stroke-opacity=".12" stroke-width="2.25" stroke-linecap="round" />
+</svg>

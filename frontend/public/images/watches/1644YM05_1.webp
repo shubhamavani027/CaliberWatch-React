@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f5f5f5"/>
+  
+  <!-- Watch Case Rose Gold -->
+  <circle cx="200" cy="200" r="180" fill="#b76e79" stroke="#8b5563" stroke-width="2"/>
+  <circle cx="200" cy="200" r="170" fill="#d4a5a5"/>
+  
+  <!-- Watch Glass -->
+  <circle cx="200" cy="200" r="160" fill="#e8f4f8" opacity="0.4"/>
+  
+  <!-- Watch Face -->
+  <circle cx="200" cy="200" r="155" fill="#faf5f0"/>
+  
+  <!-- Diamond-shaped Hour Markers -->
+  <g fill="#d4a5a5">
+    <polygon points="200,55 205,65 200,75 195,65" />
+    <polygon points="280,135 288,140 280,148 272,140" />
+    <polygon points="345,200 335,205 325,200 335,195" />
+    <polygon points="280,265 288,260 280,252 272,260" />
+    <polygon points="200,345 205,335 200,325 195,335" />
+    <polygon points="120,265 112,260 120,252 128,260" />
+    <polygon points="55,200 65,205 75,200 65,195" />
+    <polygon points="120,135 112,140 120,148 128,140" />
+  </g>
+  
+  <!-- Center Dot -->
+  <circle cx="200" cy="200" r="6" fill="#d4a5a5"/>
+  
+  <!-- Hour Hand -->
+  <line x1="200" y1="200" x2="200" y2="120" stroke="#d4a5a5" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Minute Hand -->
+  <line x1="200" y1="200" x2="270" y2="130" stroke="#8b5563" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Watch Brand Text -->
+  <text x="200" y="300" font-family="Arial" font-size="14" font-weight="bold" fill="#8b5563" text-anchor="middle">CALIBER</text>
+</svg>

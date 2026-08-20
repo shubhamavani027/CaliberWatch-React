@@ -1,0 +1,25 @@
+.admin-footer {
+  margin-top: auto;
+  background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+  color: #fff;
+  padding: 60px 0 30px;
+  border-top: 1px solid rgba(214, 178, 74, 0.40);
+}
+
+.admin-footer p {
+  color: #ddd;
+  font-size: 0.95rem;
+  line-height: 1.8;
+}
+
+@media (max-width: 768px) {
+  .admin-footer {
+    padding: 40px 0 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .admin-footer {
+    padding: 30px 0 15px;
+  }
+}

@@ -1,0 +1,137 @@
+.watchdetail-shell {
+  padding-top: 128px;
+  padding-bottom: 80px;
+}
+
+.watchdetail-back {
+  margin-bottom: 14px;
+}
+
+.watchdetail-title {
+  font-family: var(--font-display);
+  font-weight: 900;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.watchdetail-price {
+  font-family: var(--font-body);
+  font-weight: 900;
+  font-size: 1.7rem;
+  letter-spacing: 0.01em;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: var(--luxury-gold);
+  margin: 10px 0 10px;
+}
+
+.watchdetail-desc {
+  color: var(--text-muted);
+  line-height: 1.8;
+  margin-bottom: 16px;
+}
+
+.watchdetail-panel {
+  background: var(--panel-surface) !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 18px !important;
+}
+
+.watchdetail-media {
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  background: rgba(0, 0, 0, 0.30);
+  height: 460px;
+}
+
+.watchdetail-carousel,
+.watchdetail-carousel .carousel-inner,
+.watchdetail-carousel .carousel-item {
+  height: 100%;
+}
+
+.watchdetail-mediaEl {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  background: #000;
+}
+
+@media (max-width: 991px) {
+  .watchdetail-media {
+    height: 380px;
+  }
+}
+
+@media (max-width: 576px) {
+  .watchdetail-media {
+    height: 320px;
+  }
+}
+
+.watchdetail-accordion .accordion-item {
+  background: transparent !important;
+  border: 1px solid var(--border-color) !important;
+  border-radius: 16px !important;
+  overflow: hidden;
+}
+
+.watchdetail-accordion .accordion-item + .accordion-item {
+  margin-top: 10px;
+}
+
+.watchdetail-accordion .accordion-button {
+  background: rgba(0, 0, 0, 0.22) !important;
+  color: var(--text-primary) !important;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+}
+
+.watchdetail-accordion .accordion-button::after {
+  filter: invert(1);
+  opacity: 0.8;
+}
+
+.watchdetail-accordion .accordion-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(214, 178, 74, 0.18) !important;
+}
+
+.watchdetail-accordion .accordion-body {
+  color: var(--text-secondary);
+  line-height: 1.8;
+}
+
+.watchdetail-kv {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+.watchdetail-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.watchdetail-row:last-child {
+  border-bottom: none;
+}
+
+.watchdetail-label {
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.22em;
+  font-size: 0.66rem;
+  font-weight: 900;
+}
+
+.watchdetail-value {
+  color: var(--text-primary);
+  font-weight: 800;
+  text-align: right;
+}

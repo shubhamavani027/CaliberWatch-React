@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f5f5f5"/>
+  
+  <!-- Watch Case -->
+  <circle cx="200" cy="200" r="180" fill="#1a1a1a" stroke="#333" stroke-width="2"/>
+  <circle cx="200" cy="200" r="170" fill="#2d2d2d"/>
+  
+  <!-- Watch Glass -->
+  <circle cx="200" cy="200" r="160" fill="#e8f4f8" opacity="0.6"/>
+  
+  <!-- Watch Face -->
+  <circle cx="200" cy="200" r="155" fill="#0a1929"/>
+  
+  <!-- Hour Markers -->
+  <g stroke="#E0A084" stroke-width="3">
+    <line x1="200" y1="50" x2="200" y2="70"/>
+    <line x1="283" y1="67" x2="271" y2="85"/>
+    <line x1="350" y1="200" x2="330" y2="200"/>
+    <line x1="283" y1="333" x2="271" y2="315"/>
+    <line x1="200" y1="350" x2="200" y2="330"/>
+    <line x1="117" y1="333" x2="129" y2="315"/>
+    <line x1="50" y1="200" x2="70" y2="200"/>
+    <line x1="117" y1="67" x2="129" y2="85"/>
+  </g>
+  
+  <!-- Center Dot -->
+  <circle cx="200" cy="200" r="6" fill="#E0A084"/>
+  
+  <!-- Hour Hand -->
+  <line x1="200" y1="200" x2="200" y2="120" stroke="#E0A084" stroke-width="8" stroke-linecap="round"/>
+  
+  <!-- Minute Hand -->
+  <line x1="200" y1="200" x2="200" y2="80" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Second Hand -->
+  <line x1="200" y1="200" x2="200" y2="90" stroke="#E0A084" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Watch Brand Text -->
+  <text x="200" y="260" font-family="Arial" font-size="16" font-weight="bold" fill="#E0A084" text-anchor="middle">CALIBER</text>
+</svg>

@@ -1,0 +1,419 @@
+/* Admin Navigation Bar - Comprehensive Styles */
+
+/* Dark Mode Support */
+body.dark-mode .navbar-admin {
+  background: rgba(0, 0, 0, 0.70);
+  border-bottom-color: rgba(214, 178, 74, 0.40);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+}
+
+body.dark-mode .navbar-admin-brand {
+  color: rgba(255, 255, 255, 0.94) !important;
+}
+
+body.dark-mode .navbar-admin-brand:hover {
+  color: var(--primary-color) !important;
+}
+
+body.dark-mode .nav-link-admin {
+  color: #e9eef1 !important;
+}
+
+body.dark-mode .nav-link-admin:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92) !important;
+}
+
+body.dark-mode .nav-link-admin.active {
+  background: rgba(214, 178, 74, 0.14);
+  color: var(--primary-color) !important;
+}
+
+body.dark-mode .admin-pill {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(214, 178, 74, 0.35);
+  color: rgba(255, 255, 255, 0.82);
+}
+
+body.dark-mode .admin-pill:hover {
+  color: var(--primary-color);
+}
+
+body.dark-mode .navbar-toggler-admin {
+  border-color: rgba(214, 178, 74, 0.55);
+}
+
+body.dark-mode .navbar-toggler-admin:focus {
+  box-shadow: 0 0 0 0.3rem rgba(214, 178, 74, 0.18);
+  border-color: rgba(214, 178, 74, 0.80);
+}
+
+body.dark-mode .navbar-admin .navbar-nav {
+  background: rgba(24, 31, 33, 0.9);
+  border-color: rgba(224, 160, 132, 0.2);
+}
+
+/* Main Navbar */
+.navbar-admin {
+  background: rgba(0, 0, 0, 0.70);
+  border-bottom: 1px solid rgba(214, 178, 74, 0.40);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.55);
+  padding: 0.75rem 0;
+  transition: all 0.3s ease;
+  position: sticky;
+  top: 0;
+  z-index: 99;
+  backdrop-filter: blur(14px);
+}
+
+.navbar-admin:hover {
+  box-shadow: 0 14px 45px rgba(0, 0, 0, 0.65);
+}
+
+/* Navbar Brand */
+.navbar-admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-weight: 800;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.94) !important;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  letter-spacing: -0.5px;
+}
+
+.navbar-admin-brand:hover {
+  color: var(--primary-color) !important;
+  transform: scale(1.02);
+  text-decoration: none;
+}
+
+/* Admin Icon */
+.admin-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 800;
+  animation: float 2.5s ease-in-out infinite;
+  box-shadow: 0 4px 12px rgba(214, 178, 74, 0.20);
+  transition: all 0.3s ease;
+}
+
+.admin-icon:hover {
+  transform: scale(1.08);
+  box-shadow: 0 6px 16px rgba(224, 160, 132, 0.35);
+}
+
+/* Brand Text */
+.brand-text {
+  letter-spacing: 0.5px;
+  display: hidden;
+}
+
+/* Navigation Links */
+.nav-link-admin {
+  color: rgba(255, 255, 255, 0.80) !important;
+  font-weight: 600;
+  padding: 0.6rem 1.1rem !important;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-decoration: none !important;
+  font-size: 0.95rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.nav-link-admin::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(214, 178, 74, 0.12);
+  transition: left 0.3s ease;
+  z-index: -1;
+}
+
+.nav-link-admin:hover::before {
+  left: 0;
+}
+
+.nav-link-admin:hover {
+  background: rgba(255, 255, 255, 0.06);
+  color: rgba(255, 255, 255, 0.92) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* Active Link */
+.nav-link-admin.active {
+  background: rgba(214, 178, 74, 0.14);
+  color: var(--primary-color) !important;
+  font-weight: 700;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.nav-link-admin.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 10%;
+  right: 10%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  border-radius: 2px;
+}
+
+/* Primary Navigation Link */
+.nav-link-primary {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: #fff !important;
+  font-weight: 700;
+  border: none;
+  box-shadow: 0 4px 12px rgba(214, 178, 74, 0.20);
+}
+
+.nav-link-primary:hover {
+  background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary-color) 100%);
+  color: #fff !important;
+  box-shadow: 0 8px 24px rgba(214, 178, 74, 0.24);
+  transform: translateY(-2px);
+  text-decoration: none;
+}
+
+.nav-link-primary:active {
+  transform: translateY(0);
+}
+
+.nav-link-store {
+  border: 1px solid rgba(214, 178, 74, 0.28);
+  color: var(--primary-color) !important;
+}
+
+.nav-link-store:hover {
+  background: rgba(214, 178, 74, 0.12);
+  color: #f0c85a !important;
+  border-color: rgba(214, 178, 74, 0.42);
+}
+
+/* Admin Pill Badge */
+.admin-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.45rem 1rem;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(214, 178, 74, 0.35);
+  color: rgba(255, 255, 255, 0.82);
+  font-weight: 700;
+  font-size: 0.95rem;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.35);
+}
+
+.admin-pill:hover {
+  background: rgba(214, 178, 74, 0.14);
+  color: var(--primary-color);
+  transform: scale(1.05);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.45);
+}
+
+.admin-pill:active {
+  transform: scale(0.98);
+}
+
+/* Danger Link */
+.nav-link-danger {
+  color: #dc3545 !important;
+  border: 1px solid rgba(220, 53, 69, 0.2);
+  transition: all 0.3s ease;
+}
+
+.nav-link-danger:hover {
+  background: rgba(220, 53, 69, 0.1);
+  color: #b42318 !important;
+  border-color: rgba(220, 53, 69, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(220, 53, 69, 0.15);
+}
+
+/* Navbar Toggler */
+.navbar-toggler-admin {
+  border: 2px solid #E0A084;
+  border-radius: 10px;
+  padding: 0.35rem 0.65rem;
+  transition: all 0.3s ease;
+  background: transparent;
+  color: #333;
+}
+
+.navbar-toggler-admin:focus {
+  box-shadow: 0 0 0 0.3rem rgba(224, 160, 132, 0.3);
+  border-color: #D4836B;
+  outline: none;
+}
+
+.navbar-toggler-admin:active {
+  transform: scale(0.98);
+}
+
+.navbar-toggler-admin .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23E0A084' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Navbar Collapse */
+.navbar-collapse {
+  transition: all 0.3s ease;
+}
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes slideInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 991px) {
+  .navbar-admin-brand {
+    font-size: 1.15rem;
+    gap: 0.5rem;
+  }
+
+  .admin-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  .nav-link-admin {
+    padding: 0.5rem 0.8rem !important;
+    font-size: 0.95rem;
+  }
+
+  .admin-pill {
+    padding: 0.35rem 0.75rem;
+    font-size: 0.85rem;
+  }
+
+  .navbar-admin .navbar-nav {
+    margin-top: 0.75rem;
+    padding: 0.75rem;
+    border-radius: 12px;
+    background: rgba(248, 249, 250, 0.95);
+    border: 1px solid rgba(224, 160, 132, 0.18);
+    backdrop-filter: blur(5px);
+    animation: slideInDown 0.3s ease;
+  }
+
+  .nav-link-admin {
+    text-align: center;
+    margin: 0.25rem 0;
+    border-radius: 8px;
+  }
+
+  .admin-pill {
+    width: 100%;
+    margin: 0.35rem 0;
+  }
+
+  .nav-link-primary {
+    margin: 0.5rem 0;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 576px) {
+  .navbar-admin {
+    padding: 0.5rem 0;
+  }
+
+  .navbar-admin-brand {
+    font-size: 1rem;
+  }
+
+  .admin-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 16px;
+  }
+
+  .nav-link-admin {
+    padding: 0.5rem !important;
+    font-size: 0.9rem;
+    margin: 0.2rem 0;
+  }
+
+  .admin-pill {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    width: 100%;
+    margin: 0.3rem 0;
+  }
+
+  .navbar-toggler-admin {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .navbar-admin .navbar-nav {
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    border-radius: 10px;
+  }
+
+  .brand-text {
+    display: none;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 360px) {
+  .navbar-admin {
+    padding: 0.4rem 0;
+  }
+
+  .navbar-admin-brand {
+    font-size: 0.9rem;
+    gap: 0.4rem;
+  }
+
+  .admin-icon {
+    width: 28px;
+    height: 28px;
+    font-size: 14px;
+  }
+
+  .nav-link-admin {
+    padding: 0.4rem !important;
+    font-size: 0.8rem;
+  }
+
+  .admin-pill {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.75rem;
+  }
+}

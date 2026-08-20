@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <rect width="400" height="400" fill="#f5f5f5"/>
+  <rect x="85" y="65" width="230" height="270" rx="45" fill="#d4af37" stroke="#b8860b" stroke-width="2"/>
+  <rect x="100" y="80" width="200" height="240" rx="40" fill="#ffd700"/>
+  <rect x="115" y="95" width="170" height="210" rx="35" fill="#000"/>
+  <rect x="120" y="100" width="160" height="200" rx="30" fill="#0a0a0a"/>
+  <text x="200" y="170" font-family="monospace" font-size="42" font-weight="bold" fill="#ffd700" text-anchor="middle">10:45</text>
+  <text x="200" y="205" font-family="Arial" font-size="13" fill="#ffd700" text-anchor="middle">HR: 72 • O₂: 98%</text>
+  <text x="200" y="225" font-family="Arial" font-size="11" fill="#999" text-anchor="middle">Active: 45 min</text>
+  <text x="200" y="360" font-family="Arial" font-size="14" font-weight="bold" fill="#ffd700" text-anchor="middle">HUAWEI</text>
+</svg>

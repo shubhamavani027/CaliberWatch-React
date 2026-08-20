@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400">
+  <!-- Background -->
+  <rect width="400" height="400" fill="#f5f5f5"/>
+  
+  <!-- Watch Case -->
+  <circle cx="200" cy="200" r="180" fill="#c0c0c0" stroke="#999" stroke-width="2"/>
+  <circle cx="200" cy="200" r="170" fill="#d0d0d0"/>
+  
+  <!-- Watch Glass -->
+  <circle cx="200" cy="200" r="160" fill="#e8f4f8" opacity="0.3"/>
+  
+  <!-- Watch Face -->
+  <circle cx="200" cy="200" r="155" fill="#f5f5f5"/>
+  
+  <!-- Hour Markers -->
+  <g stroke="#333" stroke-width="2">
+    <line x1="200" y1="50" x2="200" y2="65"/>
+    <line x1="300" y1="100" x2="290" y2="110"/>
+    <line x1="350" y1="200" x2="335" y2="200"/>
+    <line x1="300" y1="300" x2="290" y2="290"/>
+    <line x1="200" y1="350" x2="200" y2="335"/>
+    <line x1="100" y1="300" x2="110" y2="290"/>
+    <line x1="50" y1="200" x2="65" y2="200"/>
+    <line x1="100" y1="100" x2="110" y2="110"/>
+  </g>
+  
+  <!-- Subdial -->
+  <circle cx="260" cy="140" r="25" fill="none" stroke="#333" stroke-width="1"/>
+  
+  <!-- Center Dot -->
+  <circle cx="200" cy="200" r="5" fill="#333"/>
+  
+  <!-- Hour Hand -->
+  <line x1="200" y1="200" x2="200" y2="120" stroke="#333" stroke-width="7" stroke-linecap="round"/>
+  
+  <!-- Minute Hand -->
+  <line x1="200" y1="200" x2="270" y2="130" stroke="#666" stroke-width="5" stroke-linecap="round"/>
+  
+  <!-- Watch Brand Text -->
+  <text x="200" y="290" font-family="Arial" font-size="14" font-weight="bold" fill="#333" text-anchor="middle">POLICE</text>
+</svg>

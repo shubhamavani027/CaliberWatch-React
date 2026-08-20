@@ -1,0 +1,89 @@
+.admin-shell {
+  --font-display: 'Playfair Display', serif;
+  --font-sans: 'Poppins', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --luxury-bg: #050505;
+  --luxury-bg-2: #0b0d0e;
+  --luxury-card: rgba(255, 255, 255, 0.05);
+  --luxury-border: rgba(255, 255, 255, 0.10);
+  --luxury-gold: #d6b24a;
+  --luxury-gold-2: #f0d178;
+  --luxury-gold-3: #b08d24;
+  --primary-color: var(--luxury-gold);
+  --primary-light: var(--luxury-gold-2);
+  --primary-dark: var(--luxury-gold-3);
+  --dark-bg: var(--luxury-bg);
+  --light-bg: #0b0d0e;
+  --text-dark: rgba(255, 255, 255, 0.92);
+  --text-light: rgba(255, 255, 255, 0.62);
+  --text-muted: rgba(255, 255, 255, 0.42);
+  --border-radius: 12px;
+  --transition: all 0.3s ease;
+  --box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  --box-shadow-lg: 0 15px 40px rgba(224, 160, 132, 0.2);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: var(--luxury-bg);
+  color: rgba(255, 255, 255, 0.92);
+  font-family: var(--font-sans);
+}
+
+.admin-shell *,
+.admin-shell *::before,
+.admin-shell *::after {
+  box-sizing: border-box;
+}
+
+.admin-main-content {
+  flex: 1;
+  min-height: 80vh;
+  background: transparent;
+}
+
+.admin-access-gate {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at top, rgba(214, 178, 74, 0.18), transparent 35%),
+    linear-gradient(180deg, #070707 0%, #111315 100%);
+}
+
+.admin-access-card {
+  width: min(520px, 100%);
+  padding: 40px 32px;
+  border: 1px solid rgba(214, 178, 74, 0.24);
+  border-radius: 24px;
+  background: rgba(20, 22, 24, 0.92);
+  box-shadow: 0 24px 80px rgba(0, 0, 0, 0.45);
+  text-align: center;
+}
+
+.admin-access-card h1 {
+  margin-bottom: 12px;
+  color: rgba(255, 255, 255, 0.96);
+  font-size: 2rem;
+}
+
+.admin-access-card p {
+  margin-bottom: 20px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.admin-access-link {
+  display: inline-block;
+  padding: 12px 18px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: #000;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.admin-access-link:hover {
+  color: #000;
+  filter: brightness(1.05);
+}

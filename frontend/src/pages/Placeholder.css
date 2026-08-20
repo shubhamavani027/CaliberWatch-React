@@ -1,0 +1,117 @@
+.placeholder-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.placeholder-page--video {
+  isolation: isolate;
+  min-height: calc(100vh - 72px);
+  display: flex;
+  align-items: center;
+}
+
+.placeholder-page__video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  filter: saturate(1.08) brightness(1.02) contrast(1.08);
+}
+
+.placeholder-page__overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  background:
+    linear-gradient(90deg, rgba(6, 6, 6, 0.2) 0%, rgba(6, 6, 6, 0.06) 48%, rgba(6, 6, 6, 0.16) 100%),
+    radial-gradient(circle at 50% 18%, rgba(212, 175, 55, 0.08), transparent 34%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.02), rgba(0, 0, 0, 0.08));
+}
+
+.placeholder-page__container {
+  position: relative;
+  z-index: 2;
+}
+
+.placeholder-page--contact .placeholder-page__video {
+  filter: saturate(1.12) brightness(1.12) contrast(1.08);
+}
+
+.placeholder-page--contact .placeholder-page__overlay {
+  background:
+    radial-gradient(circle at 50% 44%, rgba(0, 0, 0, 0.48), transparent 30%),
+    linear-gradient(90deg, rgba(6, 6, 6, 0.34) 0%, rgba(6, 6, 6, 0.16) 48%, rgba(6, 6, 6, 0.28) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.18), rgba(0, 0, 0, 0.14));
+}
+
+.placeholder-page--contact .placeholder-page__container {
+  text-shadow: 0 4px 22px rgba(0, 0, 0, 0.52);
+}
+
+.placeholder-page--contact .placeholder-page__container {
+  padding: 44px 36px;
+  border-radius: 28px;
+  backdrop-filter: blur(10px);
+}
+
+.placeholder-page--contact .lux-overline {
+  color: #e0b941;
+}
+
+.placeholder-page--contact .lux-sectionTitle {
+  color: #fbf8f2;
+}
+
+.placeholder-page--contact .lux-sectionSub {
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 720px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+[data-theme='light'] .placeholder-page__video {
+  filter: saturate(1.04) brightness(1.04) contrast(1.06);
+}
+
+[data-theme='light'] .placeholder-page--contact .placeholder-page__video {
+  filter: saturate(1.06) brightness(1.08) contrast(1.06);
+}
+
+[data-theme='light'] .placeholder-page__overlay {
+  background:
+    linear-gradient(90deg, rgba(255, 249, 241, 0.18) 0%, rgba(255, 249, 241, 0.04) 48%, rgba(255, 249, 241, 0.14) 100%),
+    radial-gradient(circle at 50% 18%, rgba(214, 178, 74, 0.06), transparent 34%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.01), rgba(255, 255, 255, 0.04));
+}
+
+[data-theme='light'] .placeholder-page--contact .placeholder-page__overlay {
+  background:
+    radial-gradient(circle at 50% 44%, rgba(76, 55, 19, 0.18), transparent 30%),
+    linear-gradient(90deg, rgba(255, 249, 241, 0.22) 0%, rgba(255, 249, 241, 0.08) 48%, rgba(255, 249, 241, 0.18) 100%),
+    linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.06));
+}
+
+[data-theme='light'] .placeholder-page--contact .placeholder-page__container {
+  background: rgba(255, 250, 242, 0.52);
+  border: 1px solid rgba(113, 86, 40, 0.14);
+  box-shadow: 0 24px 60px rgba(92, 68, 27, 0.12);
+  text-shadow: none;
+}
+
+[data-theme='light'] .placeholder-page--contact .lux-sectionTitle {
+  color: rgba(27, 20, 13, 0.92);
+}
+
+[data-theme='light'] .placeholder-page--contact .lux-sectionSub {
+  color: rgba(27, 20, 13, 0.78);
+}
+
+@media (max-width: 576px) {
+  .placeholder-page--contact .placeholder-page__container {
+    padding: 28px 20px;
+    border-radius: 22px;
+  }
+}

@@ -1,0 +1,700 @@
+/* Watches Page - Comprehensive Styles */
+
+/* Dark Mode Support */
+body.dark-mode .watches-page,
+body.dark-mode .products-section {
+  background: linear-gradient(135deg, #0f1416 0%, #0b0d0e 100%);
+  color: #e9eef1;
+}
+
+body.dark-mode .section-title {
+  color: var(--primary-color);
+}
+
+body.dark-mode .section-title::after {
+  background: linear-gradient(90deg, var(--primary-light) 0%, var(--primary-color) 100%);
+}
+
+body.dark-mode .product-card,
+body.dark-mode .watch-card {
+  background: #121516;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .product-card:hover,
+body.dark-mode .watch-card:hover {
+  box-shadow: 0 16px 40px rgba(224, 160, 132, 0.25);
+}
+
+body.dark-mode .card-image-container {
+  background: #1a1f21;
+}
+
+body.dark-mode .watch-title {
+  color: #e9eef1;
+}
+
+body.dark-mode .watch-description {
+  color: #a0a0a0;
+}
+
+body.dark-mode .watch-price {
+  color: var(--primary-color);
+}
+
+body.dark-mode .search-section {
+  background: #0b0d10;
+}
+
+body.dark-mode .search-field {
+  background: #1a1f21;
+  color: #e9eef1;
+  border-color: #2a3233 !important;
+}
+
+body.dark-mode .search-field:focus {
+  background: #1a1f21;
+  color: #e9eef1;
+  border-color: var(--primary-color) !important;
+}
+
+body.dark-mode .view-btn {
+  background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-light) 100%);
+  color: #1a1a1a;
+}
+
+/* Main Watches Page */
+.watches-page {
+  background: #ffffff;
+  overflow-x: hidden;
+  min-height: calc(100vh - 80px);
+}
+
+/* Products Section */
+.products-section {
+  padding: 80px 0;
+  background: #ffffff;
+  position: relative;
+}
+
+.products-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent 0%, #E0A084 50%, transparent 100%);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 50px;
+  position: relative;
+  text-align: center;
+  letter-spacing: -0.5px;
+  animation: slideInUp 0.6s ease;
+}
+
+.section-title::after {
+  content: '';
+  display: block;
+  width: 70px;
+  height: 4px;
+  background: linear-gradient(90deg, #E0A084 0%, #F4A582 100%);
+  margin: 1rem auto 0;
+  border-radius: 2px;
+}
+
+/* Watch/Product Card */
+.watch-card,
+.product-card {
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.23, 1, 0.320, 1);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+}
+
+.watch-card:hover,
+.product-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(224, 160, 132, 0.25);
+}
+
+/* Card Image Container */
+.card-image-container {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef2f5 100%);
+  height: 280px;
+  flex-shrink: 0;
+}
+
+.card-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.watch-card:hover .card-image,
+.product-card:hover .card-image {
+  transform: scale(1.12) rotate(0.5deg);
+}
+
+/* Card Overlay */
+.card-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(26, 26, 26, 0.7) 0%, rgba(0, 0, 0, 0.75) 100%);
+  backdrop-filter: blur(2px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  gap: 12px;
+}
+
+.watch-card:hover .card-overlay,
+.product-card:hover .card-overlay {
+  opacity: 1;
+}
+
+/* View Button */
+.view-btn {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  color: #fff;
+  padding: 12px 28px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgba(224, 160, 132, 0.3);
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.view-btn:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: scale(1.08);
+  box-shadow: 0 8px 24px rgba(224, 160, 132, 0.4);
+  text-decoration: none;
+  color: #fff;
+}
+
+.view-btn:active {
+  transform: scale(0.98);
+}
+
+/* Card Body */
+.card-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* Watch/Product Title */
+.watch-title {
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+  line-height: 1.4;
+  transition: color 0.3s ease;
+}
+
+.watch-card:hover .watch-title,
+.product-card:hover .watch-title {
+  color: #E0A084;
+}
+
+/* Description */
+.watch-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: auto;
+}
+
+/* Price */
+.watch-price {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #E0A084;
+  margin-bottom: 12px;
+  text-shadow: 0 1px 3px rgba(224, 160, 132, 0.1);
+}
+
+/* Rating */
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  margin-bottom: 16px;
+}
+
+.stars {
+  color: #FFC107;
+  letter-spacing: 2px;
+}
+
+.review-count {
+  color: #999;
+  font-size: 0.8rem;
+}
+
+/* Add to Cart Button */
+.btn-add-to-cart {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 10px;
+  padding: 12px 16px;
+  transition: all 0.3s ease;
+  margin-top: auto;
+  width: 100%;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 13px;
+  box-shadow: 0 4px 12px rgba(224, 160, 132, 0.2);
+  cursor: pointer;
+}
+
+.btn-add-to-cart:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(224, 160, 132, 0.3);
+}
+
+.btn-add-to-cart:active {
+  transform: translateY(0);
+}
+
+.btn-add-to-cart:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Loading Spinner */
+.spinner-custom {
+  color: #E0A084;
+  width: 4rem;
+  height: 4rem;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Search Section */
+.search-section {
+  padding: 50px 0;
+  background: linear-gradient(135deg, #f8f9fa 0%, #eef2f5 100%);
+  position: relative;
+}
+
+.search-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: -20%;
+  width: 500px;
+  height: 500px;
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border-radius: 50%;
+  opacity: 0.06;
+  z-index: 0;
+}
+
+/* Search Group */
+.search-group {
+  margin-bottom: 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Search Input Group */
+.search-input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 6px 20px rgba(224, 160, 132, 0.25);
+  display: flex;
+  transition: all 0.3s ease;
+}
+
+.search-input-group:focus-within {
+  box-shadow: 0 12px 30px rgba(224, 160, 132, 0.35);
+  transform: translateY(-2px);
+}
+
+/* Search Field */
+.search-field {
+  border: none;
+  padding: 14px 20px;
+  font-size: 1rem;
+  background: #ffffff;
+  color: #333;
+  flex: 1;
+  transition: all 0.3s ease;
+}
+
+.search-field::placeholder {
+  color: #999;
+  font-weight: 500;
+}
+
+.search-field:focus {
+  box-shadow: none;
+  outline: none;
+}
+
+/* Search Button */
+.search-btn-custom {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #fff;
+  font-weight: 700;
+  padding: 14px 32px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+}
+
+.search-btn-custom:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: translateX(2px);
+}
+
+.search-btn-custom:active {
+  transform: translateX(0);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design - Tablet */
+@media (max-width: 991px) {
+  .products-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .card-image-container {
+    height: 240px;
+  }
+
+  .card-body {
+    padding: 20px;
+  }
+
+  .search-section {
+    padding: 40px 0;
+  }
+}
+
+/* Responsive Design - Mobile */
+@media (max-width: 576px) {
+  .products-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+    margin-bottom: 30px;
+  }
+
+  .section-title::after {
+    width: 50px;
+    height: 3px;
+  }
+
+  .card-image-container {
+    height: 200px;
+  }
+
+  .card-body {
+    padding: 16px;
+  }
+
+  .watch-title {
+    font-size: 1rem;
+  }
+
+  .watch-price {
+    font-size: 1.2rem;
+  }
+
+  .btn-add-to-cart {
+    padding: 10px 12px;
+    font-size: 12px;
+  }
+
+  .view-btn {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+
+  .search-section {
+    padding: 30px 0;
+  }
+
+  .search-field {
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  .search-btn-custom {
+    padding: 12px 24px;
+    font-size: 12px;
+  }
+
+  .search-input-group {
+    flex-direction: column;
+  }
+
+  .search-btn-custom {
+    width: 100%;
+  }
+}
+
+/* Responsive Design - Small Mobile */
+@media (max-width: 360px) {
+  .section-title {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+
+  .card-image-container {
+    height: 180px;
+  }
+
+  .card-body {
+    padding: 12px;
+  }
+
+  .watch-title {
+    font-size: 0.9rem;
+  }
+
+  .watch-description {
+    font-size: 0.8rem;
+  }
+
+  .watch-price {
+    font-size: 1rem;
+  }
+}
+
+  color: #1a1a1a;
+  padding: 0.75rem 2rem;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.view-btn:hover {
+  background: #F4A582;
+  transform: scale(1.05);
+}
+
+.watch-title {
+  color: #1a1a1a;
+  font-weight: 700;
+  margin: 1rem 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.watch-description {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+  line-height: 1.5;
+}
+
+.watch-price {
+  font-size: 1.25rem;
+  font-weight: 800;
+  color: #E0A084;
+  margin-bottom: 0.5rem;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.9rem;
+}
+
+.stars {
+  color: #FFC107;
+}
+
+.review-count {
+  color: #999;
+}
+
+.btn-add-to-cart {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  border-radius: 8px;
+  padding: 0.75rem;
+  transition: all 0.3s ease;
+  margin-top: auto;
+}
+
+.btn-add-to-cart:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(224, 160, 132, 0.3);
+}
+
+.spinner-custom {
+  color: #E0A084;
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Search Section */
+.search-section {
+  padding: 3rem 0;
+  background: #f8f9fa;
+}
+
+.search-group {
+  margin-bottom: 0;
+}
+
+.search-input-group {
+  border-radius: 50px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(224, 160, 132, 0.2);
+}
+
+.search-field {
+  border: none;
+  padding: 1rem 1.5rem;
+  font-size: 1rem;
+}
+
+.search-field:focus {
+  box-shadow: none;
+  border-color: #E0A084;
+}
+
+.search-btn-custom {
+  background: linear-gradient(135deg, #E0A084 0%, #F4A582 100%);
+  border: none;
+  color: #1a1a1a;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.search-btn-custom:hover {
+  background: linear-gradient(135deg, #F4A582 0%, #E0A084 100%);
+}
+
+/* Dark Mode */
+body.dark-mode .watches-page,
+body.dark-mode .products-section {
+  background: #0f1416;
+  color: #e9eef1;
+}
+
+body.dark-mode .section-title {
+  color: #fff;
+}
+
+body.dark-mode .product-card {
+  background: #121516;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.6);
+}
+
+body.dark-mode .watch-description {
+  color: #c9d0d3;
+}
+
+body.dark-mode .watch-price {
+  color: #F4A582;
+}
+
+body.dark-mode .view-btn {
+  background: #E0A084;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .products-section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .products-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.5rem;
+  }
+
+  .card-image-container {
+    height: 200px;
+  }
+}

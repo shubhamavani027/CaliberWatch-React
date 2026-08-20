@@ -1,0 +1,243 @@
+.category-page {
+  background: #fff;
+  min-height: 90vh;
+  padding: 40px 0;
+}
+
+.category-header {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: slideInUp 0.6s ease;
+}
+
+.category-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 10px;
+  background: linear-gradient(135deg, #E0A084 0%, #D4836B 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.category-subtitle {
+  font-size: 1.1rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.filter-section {
+  background: #f8f8f8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 30px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.search-wrapper {
+  position: relative;
+}
+
+.search-input {
+  border: 2px solid #E0A084;
+  border-radius: 8px;
+  padding: 12px 16px;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #D4836B;
+  box-shadow: 0 0 0 3px rgba(224, 160, 132, 0.1);
+  outline: none;
+}
+
+.search-input::placeholder {
+  color: #999;
+}
+
+.sort-select {
+  border: 2px solid #E0A084;
+  border-radius: 8px;
+  padding: 10px 12px;
+  background-color: white;
+  color: #1a1a1a;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.sort-select:focus {
+  border-color: #D4836B;
+  box-shadow: 0 0 0 3px rgba(224, 160, 132, 0.1);
+  outline: none;
+}
+
+.sort-select option {
+  color: #1a1a1a;
+  background-color: white;
+}
+
+/* Watch Card Styles */
+.watch-card {
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  background: #fff;
+  height: 100%;
+}
+
+.watch-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(224, 160, 132, 0.15);
+  border-color: #E0A084;
+}
+
+.watch-image {
+  width: 100%;
+  height: 250px;
+  display: block;
+  object-fit: cover;
+  background: #f5f5f5;
+  transition: transform 0.3s ease;
+}
+
+.watch-card:hover .watch-image {
+  transform: scale(1.05);
+}
+
+.watch-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin-bottom: 8px;
+  line-height: 1.4;
+}
+
+.watch-brand {
+  font-size: 0.9rem;
+  color: #E0A084;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 10px;
+}
+
+.watch-description {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin-bottom: 12px;
+}
+
+.rating-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.stars {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #E0A084;
+}
+
+.reviews {
+  font-size: 0.85rem;
+  color: #999;
+}
+
+.watch-price {
+  font-size: 1.8rem;
+  font-weight: 700;
+  font-family: var(--font-body);
+  letter-spacing: 0.01em;
+  font-variant-numeric: lining-nums tabular-nums;
+  color: #E0A084;
+  margin-bottom: 15px;
+}
+
+.watch-card .btn {
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+}
+
+.watch-card .btn-warning {
+  background-color: #E0A084;
+  border-color: #E0A084;
+  color: white;
+}
+
+.watch-card .btn-warning:hover {
+  background-color: #D4836B;
+  border-color: #D4836B;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 160, 132, 0.25);
+}
+
+.watch-card .btn-outline-warning {
+  color: #E0A084;
+  border-color: #E0A084;
+}
+
+.watch-card .btn-outline-warning:hover {
+  background-color: #E0A084;
+  border-color: #E0A084;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(224, 160, 132, 0.25);
+}
+
+/* Animations */
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .category-title {
+    font-size: 2.2rem;
+  }
+
+  .filter-section {
+    padding: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .category-title {
+    font-size: 1.8rem;
+  }
+
+  .category-subtitle {
+    font-size: 0.95rem;
+  }
+
+  .watch-image {
+    height: 200px;
+  }
+
+  .watch-title {
+    font-size: 1rem;
+  }
+
+  .watch-price {
+    font-size: 1.5rem;
+  }
+
+  .filter-section {
+    flex-direction: column;
+  }
+}
